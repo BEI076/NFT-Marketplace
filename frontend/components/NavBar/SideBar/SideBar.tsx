@@ -1,9 +1,10 @@
-import React from 'react'
-
-const SideBar = () => {
-  return (
-    <div>SideBar</div>
-  )
+import React from "react";
+interface SideBarProps {
+  setOpenSideMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default SideBar
+const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
+  return <div>SideBar</div>;
+};
+
+export default SideBar;

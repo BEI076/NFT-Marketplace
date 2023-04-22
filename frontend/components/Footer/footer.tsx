@@ -1,9 +1,9 @@
 import React from "react";
 
 //internal css module  import
-import Style from "./footer.module.css";
-const footer = () => {
-  return <div>footer</div>;
+import Style from "./Footer.module.css";
+const Footer = () => {
+  return <div>Footer</div>;
 };
 
-export default footer;
+export default Footer;
