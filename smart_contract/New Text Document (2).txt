@@ -1,0 +1,17 @@
+tsc --init
+npm init
+
+
+
+tsc  src/index.ts
+
+
+
+npm install <package-name> @types/<package-name> --save
+
+
+
+npm init
+npm  hardhat init 
+npm install --save-dev "hardhat@^2.13.1" "@nomicfoundation/hardhat-toolbox@^2.0.0"
+
