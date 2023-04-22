@@ -127,6 +127,24 @@ contract NFTMarketplace is ERC721URIStorage {
         payable(idMarketItem[tokenId].seller).transfer(price); //transferring the amount to the seller of the NFT
     }
 
+    //function for fetching the market items from the contract and are unsold
+    function fetchMarketItems() public view returns (MarketItem[] memory) {
+        unit256 itemCount = _tokenIds.current();                                //getting the current item count
+        unit256 unsoldItemCount = _tokenIds.current() - _itemsSold.current();   //getting the current unsold item count
+        unit256 currentIndex = 0;                                               //setting the current index to 0
+
+        MarketItem[] memory items = new MarketItem[](unsoldItemCount);    //creating a new array of market items with the unsold item count
+        for (unit256 i = 0; i < itemCount; i++) {                             //for loop for iterating through the market items
+            if (idMarketItem[i + 1].owner == address(this)) {                //checking if the owner of the NFT is the contract
+                unit256 currentId = idMarketItem[i + 1].itemId; 
+                MarketItem storage currentItem = idMarketItem[currentId];  
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            }
+        }
+        return items;
+    }
+
     
     
 }
