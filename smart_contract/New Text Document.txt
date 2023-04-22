@@ -1,1 +1,8 @@
-Let me remind you this is smart contract folder sandesh.
+metamask
+
+
+my api link to alchemcy
+
+ https://polygon-mumbai.g.alchemy.com/v2/Co2EgtLv5g3mtN_fbUD63rF3DfWvykmx
+
+ private_key : b732490637cfe5a092a3ab3ebfdabec58213f02ce6cfcb97db954d3595183ca5
