@@ -145,6 +145,63 @@ contract NFTMarketplace is ERC721URIStorage {
         return items;
     }
 
+    //purchase items
+    function fetchMyNFT() public view returns (MarketItem[] memory){
+        unit256 totalCount = _tokenIds.current();                         //getting the current item count
+        unit256 itemCount = 0;                                            //setting the item count to 0
+        unit256 currentIndex = 0;                                         //setting the current index to 0
+
+        // to know the number of items the user has
+        for(uint256 i = 0; i < totalCount; i++) {                         //for loop for iterating through the market items
+            if (idMarketItem[i + 1].owner == msg.sender) {                //checking if the owner of the NFT is the contract
+                itemCount += 1;
+            }
+        }
+        //to get the items
+
+        MarketItem[] memory items = new MarketItem[](itemCount);          //creating a new array of market items with the unsold item count
+        for (unit256 i = 0; i < totalCount; i++) {                             //for loop for iterating through the market items
+            if (idMarketItem[i + 1].owner == msg.sender) {                //checking if the owner of the NFT is the contract
+                unit256 currentId = i+1 ; 
+                MarketItem storage currentItem = idMarketItem[currentId];  
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            
+        }
+        return items;
+
+
+    }
+
+
+    //unsold contracts items
+
+    function fetchItemsListed() public view returns (MarketItem[] memory){
+        unit256 totalCount = _tokenIds.current();                         //getting the current item count
+        unit256 itemCount = 0;                                            //setting the item count to 0
+        unit256 currentIndex = 0;                                         //setting the current index to 0
+
+        // to know the number of items the user has
+        for(uint256 i = 0; i < totalCount; i++) {                         //for loop for iterating through the market items
+            if (idMarketItem[i + 1].seller == msg.sender) {               
+                itemCount += 1;
+            }
+        }
+
+        //to get the items
+        MarketItem[] memory items = new MarketItem[](itemCount);          //creating a new array of market items with the unsold item count
+        for (unit256 i = 0; i < totalCount; i++) {                             //for loop for iterating through the market items
+            if (idMarketItem[i + 1].seller == msg.sender) {                //checking if the owner of the NFT is the contract
+                unit256 currentId = i+1 ; 
+                MarketItem storage currentItem = idMarketItem[currentId];  
+                items[currentIndex] = currentItem;                       //setting the current item
+                currentIndex += 1;   
+            }
+        
+        }
+        return items;
+    }
+
     
     
 }
