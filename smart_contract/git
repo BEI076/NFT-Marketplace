@@ -1,0 +1,8 @@
+git commit
+git checkout master
+git pull
+git merge sandesh
+git push -u origin master
+git checkout sandesh
+git merge master
+git push -u origin sandesh
