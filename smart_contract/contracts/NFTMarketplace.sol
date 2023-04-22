@@ -73,30 +73,41 @@ contract NFTMarketplace is ERC721URIStorage {
     }
 
     //creating the market item
-    function createMarketItem(uint256 tokenId, uint256 price) public payable {
+    function createMarketItem(uint256 tokenId, uint256 price) private {
         require(price > 0, "Price must be greater than 0");
+        require(msg.value == listingPrice, "Price must be equal to listing price")
         require(msg.sender == ownerOf(tokenId), "You are not the owner of the token");
 
         _itemsSold.increment();                     //incrementing the items sold
         unit256 itemId = _itemsSold.current();       //getting the current item id
 
-        idMarketItem[itemId] = MarketItem(
-            itemId,
-            address(this),
+        idMarketItem[tokenId] = MarketItem(
             tokenId,
             payable(msg.sender),
-            payable(address(0)),
+            payable(address(this)),
             price,
             false
         );
 
-        emit idMarketItemCreated(
-            itemId,
-            msg.sender,
-            address(0),
-            price,
-            false
-        );
+       _transfer(msg.sender, address(this), tokenId); //transferring the ownership of the NFT to the contract
+        emit idMarketItemCreated(tokenId, msg.sender, address(this), price, false);
+    }
+
+
+    //function for resale of the NFT
+
+    function reSellToken(unit256 tokenId, unit256 price) public payable {
+        require(idMarketItem[tokenId].owner == msg.sender, "You are not the owner of the token");
+        require (msg.value == listingPrice, "Price must be equal to listing price");
+
+        IdMarketItem[tokenId].price = price;
+        IdMarketItem[tokenId].sold = false;
+        IdMarketItem[tokenId].seller = payable(msg.sender);
+        IdMarketItem[tokenId].owner = payable(address(this));
+
+        itesSold.decrement();                       //decrementing the items sold
+        _transfer(msg.sender, address(this), tokenId); //transferring the ownership of the NFT to the contract
+    
     }
     
 }
