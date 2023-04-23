@@ -86,7 +86,7 @@ const NavBar = () => {
           <div className={Style.logo}>
             <Image
               src={images.logo}
-              alt="NFT Market Place"
+              alt="NFT MARKET PLACE"
               width={100}
               height={100}
             />
@@ -94,7 +94,7 @@ const NavBar = () => {
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
               <input type="text" placeholder="Search NFT" />
-              <BsSearch onClick={() => {}} className={Style.search_con} />
+              <BsSearch onClick={() => {}} className={Style.search_icon} />
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ const NavBar = () => {
           </div>
 
           {/* menu button for mobile devices only */}
-          <div className={Style.navbar_container_right_button_menuBtn}>
+          <div className={Style.navbar_container_right_menuBtn}>
             <CgMenuRight
               className={Style.menuIcon}
               onClick={() => {
@@ -179,7 +179,7 @@ const NavBar = () => {
 
       {/* sidebar for mobile devices only */}
       {openSideMenu && (
-        <div className={Style.SideBar}>
+        <div className={Style.sideBar}>
           <SideBar setOpenSideMenu={setOpenSideMenu} />
         </div>
       )}
