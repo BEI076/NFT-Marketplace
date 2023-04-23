@@ -29,9 +29,10 @@
     margin-top:  1.5rem;
     display: flex;
     gap: 1.3rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     align-items: center;
 }
+
 
 .sideBar_social a{
     padding: .2rem;
@@ -55,7 +56,6 @@
     flex-direction: column;
     gap: 2rem;
     text-transform: uppercase;
-    font-weight: 600;
     border-bottom:  1px solid var(--icons-color);
 }
 

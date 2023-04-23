@@ -111,7 +111,7 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
 
       <div className={Style.sideBar_box}>
         <Image src={images.logo} alt="logo" width={150} height={150} />
-        <p >
+        <p>
           Discover the most outstanding articles on all topices of NFT & write
           your own stories and share them
         </p>
@@ -177,8 +177,8 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnText="Create" />
-        <Button btnText="Connect Wallet" />
+        <Button btnText="Create" handleClick={()=>{}} />
+        <Button btnText="Connect Wallet" handleClick={()=>{}} />
       </div>
     </div>
   );
