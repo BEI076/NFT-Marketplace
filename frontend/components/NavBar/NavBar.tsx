@@ -123,7 +123,6 @@ const NavBar = () => {
                 openMenu(e);
               }}
             >
-              {" "}
               Help Center
             </p>
             {help && (
@@ -138,7 +137,7 @@ const NavBar = () => {
             <MdNotifications
               className={Style.notify}
               onClick={() => {
-                openNotification;
+                openNotification();
               }}
             />
             {notification && <Notification />}
@@ -157,7 +156,9 @@ const NavBar = () => {
                 alt="Profile"
                 width={40}
                 height={40}
-                onClick={() => openProfile}
+                onClick={() => {
+                  openProfile();
+                }}
                 className={Style.navbar_container_right_profile}
               />
               {profile && <Profile />}
@@ -168,7 +169,9 @@ const NavBar = () => {
           <div className={Style.navbar_container_right_button_menuBtn}>
             <CgMenuRight
               className={Style.menuIcon}
-              onClick={() => openSideBar}
+              onClick={() => {
+                openSideBar();
+              }}
             />
           </div>
         </div>
