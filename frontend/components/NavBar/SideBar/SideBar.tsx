@@ -61,7 +61,7 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
   ];
 
   // helpcenter nav menu
-  const helpCener = [
+  const helpCenter = [
     {
       name: "About",
       link: "about",
@@ -108,24 +108,28 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
         className={Style.sideBar_closeBtn}
         onClick={() => closeSideBar()}
       />
+
       <div className={Style.sideBar_box}>
         <Image src={images.logo} alt="logo" width={150} height={150} />
-        <p>Discover the articles on all the topics of the NFT</p>
-        <div className={Style.SideBar_social}>
+        <p >
+          Discover the most outstanding articles on all topices of NFT & write
+          your own stories and share them
+        </p>
+        <div className={Style.sideBar_social}>
           <a href="#">
             <TiSocialFacebook />
+          </a>
+          <a href="#">
+            <TiSocialLinkedin />
           </a>
           <a href="#">
             <TiSocialTwitter />
           </a>
           <a href="#">
-            <TiSocialInstagram />
-          </a>
-          <a href="#">
             <TiSocialYoutube />
           </a>
           <a href="#">
-            <TiSocialLinkedin />
+            <TiSocialInstagram />
           </a>
         </div>
       </div>
@@ -138,18 +142,20 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
           >
             <p>Discover</p>
             <TiArrowSortedDown />
-            <div>
-              {openDiscover && (
-                <div className={Style.sideBar_discover}>
-                  {discover.map((el, i) => (
-                    <p key={i + 1}>
-                      <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
-                    </p>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
+
+          {openDiscover && (
+            <div className={Style.sideBar_discover}>
+              {discover.map((el, i) => (
+                <p key={i + 1} className={Style.sideBar_discover_item}>
+                  <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div>
           <div
             className={Style.sideBar_menu_box}
             onClick={() => openHelpMenu()}
@@ -160,8 +166,8 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
 
           {openHelp && (
             <div className={Style.sideBar_discover}>
-              {helpCener.map((el, i) => (
-                <p key={i + 1}>
+              {helpCenter.map((el, i) => (
+                <p key={i + 1} className={Style.sideBar_discover_item}>
                   <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
                 </p>
               ))}
@@ -169,6 +175,7 @@ const SideBar: React.FC<SideBarProps> = ({ setOpenSideMenu }) => {
           )}
         </div>
       </div>
+
       <div className={Style.sideBar_button}>
         <Button btnText="Create" />
         <Button btnText="Connect Wallet" />

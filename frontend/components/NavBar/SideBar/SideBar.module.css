@@ -1,0 +1,86 @@
+.sideBar_box{
+    margin-top: 2rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--icons-color);
+    background-color:  var(--main-bg-color);
+    /* background-color: red; */
+}
+
+.sideBar_closeBtn{
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    box-shadow:  var(--box-shadow);
+    font-size: 2.5rem;
+}
+
+.sideBar_closeBtn:hover{
+    transform:  rotate(45deg);
+}
+
+.sideBar_box p{
+    margin-top:  1rem;
+    font-weight: 500;
+}
+
+.sideBar_social{
+    margin-top:  1.5rem;
+    display: flex;
+    gap: 1.3rem;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.sideBar_social a{
+    padding: .2rem;
+    border-radius: 50%;
+    transition:  all .3s ease-in;
+    display: grid;
+}
+
+.sideBar_social a:hover{
+    background-color:  var(--icons-color);
+    color:  var(--shadow-dark-color);
+    box-shadow: 1px solid var(--icons-color);
+}
+
+.sideBar_menu{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom:  1px solid var(--icons-color);
+}
+
+.sideBar_menu_box{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.sideBar_menu_box p{
+    font-size: 1.2rem;
+    font-weight:600;
+}
+
+.sideBar_discover{
+    padding-inline: 0;
+}
+.sideBar_discover_item{
+    padding:0.5rem;
+}
+
+.sideBar_button{
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
