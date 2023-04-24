@@ -12,7 +12,7 @@ import {
 import { RiSendPlaneFill } from "react-icons/ri";
 
 //INTERNAL IMPORT
-import Style from "./Footer.module.css";
+import Style from "./footer.module.css";
 import images from "../../img";
 import { Discover, HelpCenter } from "../NavBar/index";
 
