@@ -90,6 +90,7 @@ const NavBar = () => {
               width={100}
               height={100}
             />
+            {/* <h1 className="text-slate-500 text-xl font-black px-5">NFT MARKETPLACE</h1> */}
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>

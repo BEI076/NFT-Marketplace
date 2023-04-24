@@ -11,12 +11,11 @@
   --shadow-dark-color: #d3dae7;
   --shadow-light-color: #fff;
   --main-bg-color: #ecf0f3;
+  /* --main-bg-color: #bbbbbb; */
 
-  --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
-  -1rem -1rem 1rem var(--shadow-light-color);
+  --box-shadow: 0.5rem 0.5rem 2rem var(--shadow-dark-color);
 
-  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color),
-  -.3rem -.3rem 1rem var(--shadow-dark-color)
+  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color);
 
 }
 

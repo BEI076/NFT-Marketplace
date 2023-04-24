@@ -1,31 +1,23 @@
-
 .button {
-    background-color: var(--icons-color);
-    padding: 0.7rem 0.7rem;
-    border: 1px solid var(--icons-color);
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    color: var(--shadow-light-color);
-    cursor: pointer;
-    transition:  all .2s ease-in;
-    box-shadow: var(--box-shadow);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+  background-color: var(--icons-color);
+  padding: 0.7rem 0.7rem;
+  border: 1px solid var(--icons-color);
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  color: var(--shadow-light-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 /* the search icon used */
-.icon {
-    font-size: 25px;
-    padding-left: 6rem;
-    margin-top: 0.3rem;
-    text-align: end;
-}
 
-
-.button:hover{
-    background-color: var(--main-bg-color);
-    border:  1px solid var(--icons-color);
-    color:  var(--icons-color);
+.button:hover {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
 }

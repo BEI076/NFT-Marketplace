@@ -20,7 +20,6 @@ export const HeroSection = () => {
             NTFs and sell them
           </p>
           <Button btnText="Start your search"  icon={<BsSearch />} /> 
-
         </div>
         <div className={Style.heroSection_box_right}>
           <Image
