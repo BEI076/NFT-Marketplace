@@ -118,6 +118,8 @@ const BigNFTSilder = () => {
               </div>
             </div>
 
+            
+
             <div className={Style.bigNFTSlider_box_left_creator_collection}>
               <AiFillFire
                 className={Style.bigNFTSlider_box_left_creator_collection_icon}
