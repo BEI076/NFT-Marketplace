@@ -19,7 +19,7 @@
 }
 
 .bigNFTSlider_box_left h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 
@@ -193,12 +193,15 @@
     height: 120vh;
     padding: 1.5rem;
     height: 70vh;
-
   }
 
   .bigNFTSlider_box_right {
     margin-top: -50rem;
     height: 60vh;
+  }
+
+  .bigNFTSlider_box_left h2 {
+    font-size: 1.5rem;
   }
 
   .bigNFTSlider_box_left_creator {
@@ -217,6 +220,13 @@
 
   .bigNFTSlider_box_left_creator_collection_info {
     font-size: 0.8rem;
+  }
+  .bigNFTSlider_box_left_bidding_box small {
+    /* background-color: var(--shadow-dark-color); */
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-bottom: -0.3rem;
   }
 
   .bigNFTSlider_box_left_bidding_box_timer {
