@@ -1,15 +1,28 @@
 
 .button {
     background-color: var(--icons-color);
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 0.7rem;
     border: 1px solid var(--icons-color);
     border-radius: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--shadow-light-color);
     cursor: pointer;
     transition:  all .2s ease-in;
     box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
+
+/* the search icon used */
+.icon {
+    font-size: 25px;
+    padding-left: 6rem;
+    margin-top: 0.3rem;
+    text-align: end;
+}
+
 
 .button:hover{
     background-color: var(--main-bg-color);

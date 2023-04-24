@@ -59,6 +59,7 @@
 }
 .navbar_container_right_discover p,
 .navbar_container_right_help p {
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .navbar_container_right_help {
@@ -98,6 +99,7 @@
 }
 
 .navbar_container_right_profile {
+  aspect-ratio: 1/1;
   border-radius: 50%;
 }
 
