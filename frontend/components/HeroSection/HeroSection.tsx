@@ -19,7 +19,8 @@ export const HeroSection = () => {
             Discover the most outstanding NFTs in all topics of life. Create your
             NTFs and sell them
           </p>
-          <Button btnText="Start your search" /> 
+          <Button btnText="Start your search"  icon={<BsSearch />} /> 
+
         </div>
         <div className={Style.heroSection_box_right}>
           <Image
