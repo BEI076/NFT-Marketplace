@@ -30,7 +30,7 @@
   background-color: var(--main-bg-color);
   border-radius: 2.5rem;
   box-shadow: var(--box-shadow-2);
-  height: 100vh;
+  /* height: 100vh; */
 
   /* box-shadow: var(--main-bg-color); */
 }

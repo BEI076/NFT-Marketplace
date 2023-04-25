@@ -5,8 +5,10 @@ import {
   Service,
   BigNFTSilder,
   Subscribe,
+  Filter,
   Title,
   Category,
+  NFTCard
 } from "@/components/componentindex";
 const Home = () => {
   return (
@@ -14,6 +16,12 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
+      <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life"
+      />
+      <Filter />
+      <NFTCard/>
       <Title
         heading="Browse By Category"
         paragraph="Explore the NFTs in the most featured categories"

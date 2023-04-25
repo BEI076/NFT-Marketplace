@@ -50,7 +50,7 @@
 
 .subscribe_box_left_input {
   margin-top: 1rem;
-  padding: 1rem 1rem;
+  padding: 0.6rem 1rem;
   width: 80%;
   border-radius: 4rem;
   background-color: var(--icons-color);
@@ -83,7 +83,7 @@
   }
   .subscribe_box_left_input {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .subscribe_box_left h2 {
