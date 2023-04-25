@@ -4,6 +4,9 @@ import {
   HeroSection,
   Service,
   BigNFTSilder,
+  Subscribe,
+  Title,
+  Category,
 } from "@/components/componentindex";
 const Home = () => {
   return (
@@ -11,6 +14,12 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
+      <Title
+        heading="Browse By Category"
+        paragraph="Explore the NFTs in the most featured categories"
+      />
+      <Category />
+      <Subscribe />
     </div>
   );
 };
